@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { Fade } from "react-reveal";
 
 function Section(props) {
   return (
     <Wrap bgImage = {props.carsDetails.backgroundImg}>
+    <Fade bottom>
       <ItemText>
         <h1>{props.carsDetails.title}</h1>
         <p>{props.carsDetails.description}</p>
       </ItemText>
+      </Fade>
       <Buttons>
+      <Fade bottom>
         <ButtonGroup>
           <LeftButton>{props.carsDetails.leftBtnText}</LeftButton>
           {
@@ -16,6 +20,7 @@ function Section(props) {
             <RightButton>{props.carsDetails.rightBtnText}</RightButton>
           }          
         </ButtonGroup>
+        </Fade>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
     </Wrap>
